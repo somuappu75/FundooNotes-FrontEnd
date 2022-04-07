@@ -1,0 +1,86 @@
+.container {
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 100%;
+    width: 50%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 20px;
+    .headings{
+        h1{
+            font-size: large;
+            background: -webkit-linear-gradient(rgb(243, 247, 3), rgb(252, 4, 4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            
+        }
+        h3{
+            font-size: larger;
+        }
+    }
+    .subContainer{
+        display: flex;
+        justify-content: space-between;
+       
+        .form-content{
+            display: flex;
+            flex-direction: column;
+            
+            .user-name{
+                display: flex;
+                gap: 20px;
+                .name{
+                    width: 150px; 
+                } 
+            }  
+            .password-container{
+                display: flex;
+                gap: 20px;
+                .password{
+                    width: 150px;
+                } 
+            }    
+            .email-container{
+                .email{
+                    width: 320px;
+                }
+            }
+           .btn{
+               display: flex;
+               justify-content: space-between;
+               margin-top: 50px;
+               a{
+                   color: rgb(77, 77, 253);
+               }
+               button{
+                   background-color: rgb(77, 77, 253);
+                   color: #fff;
+               }
+           }
+           
+        }
+        LXRPh {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+        }
+        .register-image{
+            height: 100px;
+            width: 300px;
+            align-self:flex-start;
+        } 
+        .figcaption{
+            position: relative;   
+            left: 20%;
+            
+        }
+        .figcaption2{
+            position: relative;   
+            left: 30%;
+    }
+     #use{
+        color: blue;
+      }
+}
+}

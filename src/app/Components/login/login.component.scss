@@ -1,0 +1,64 @@
+.Container{
+    margin-top: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    height: 80%;
+    width:30%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    .Header{
+        margin-top: -20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            font-size: large;
+            background: -webkit-linear-gradient(rgb(243, 247, 3), rgb(252, 4, 4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p{
+            font-size: large;
+        }
+        .desc{
+            font-size: 15px;
+        }
+      
+    }    
+    .login-content{
+        margin-top: 10px;
+        .Email-content{
+            .email{
+                width: 325px;
+            }
+        }
+    }
+    .login-content{
+        .Password-content{
+            .password{
+                width: 325px;
+            }
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    .btn{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        a{
+            color: rgb(77, 77, 253);
+            padding: 3px;
+        }
+        button{
+            background-color: rgb(77, 77, 253);
+            color: #fff;
+        }
+    }
+    
+}
