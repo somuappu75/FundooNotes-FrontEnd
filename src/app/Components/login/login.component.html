@@ -14,30 +14,32 @@
             <span style="color:rgb(15, 157, 88); ">e</span>
             <span style="color:rgb(66, 133, 244); ">s</span>
             </h2>
-        <br>
-        <br>
         </div>
          <p>Sign In</p>
          <p class="desc">Use Your Fundoo Account</p>
      </div>
+     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="login-content">
          <div class="Email-content">
              <mat-form-field class="email" appearance="outline">
              <mat-label>Email or Phone</mat-label>
-             <input matInput placeholder="Email">
+             <input matInput placeholder="Email" formControlName="email">
+             <mat-error>Enter Valid Phone or Mail</mat-error>
              </mat-form-field> 
          </div>
          <div class="Password-content">
                  <mat-form-field class="password" appearance="outline">
                  <mat-label>Password</mat-label>
-                 <input matInput placeholder="password">
+                 <input matInput placeholder="password"formControlName="password">
+                 <mat-error>enter valid password</mat-error>
                  </mat-form-field><br>
-                 <a href="#" target="_blank">Forgot password?</a>       
+                 <a routerLink="/forgotpassword" target="_blank">Forgot password?</a>       
          </div>
      </div>
      <div class="btn">
-         <a mat-button href="https://www.google.com/" target="_blank">create account</a>
+         <a mat-button  routerLink="/register" target="_blank">create account</a>
          <button mat-raised-button >Next</button>
      </div>
+     </form>
  </div>
  

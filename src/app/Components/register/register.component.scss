@@ -70,17 +70,22 @@
             width: 300px;
             align-self:flex-start;
         } 
-        .figcaption{
+        .image-message1{
             position: relative;   
             left: 20%;
+            height: 20px;
+        }
+        .image-message2{
+            position: relative;   
+            left: 35%;
             
         }
-        .figcaption2{
-            position: relative;   
-            left: 30%;
-    }
      #use{
         color: blue;
       }
+      #mrn{
+          font-size: 12px;
+      }
+
 }
 }

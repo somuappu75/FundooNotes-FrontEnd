@@ -13,18 +13,23 @@ import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
 import {MatCardModule} from '@angular/material/card';
+import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,MatCardModule
+    BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,MatCardModule,
+    ReactiveFormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
