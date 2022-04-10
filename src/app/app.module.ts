@@ -16,6 +16,11 @@ import {MatCardModule} from '@angular/material/card';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -23,13 +28,14 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     LoginComponent,
     ForgotpasswordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,MatCardModule,
-    ReactiveFormsModule,HttpClientModule
+    ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

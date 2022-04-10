@@ -16,6 +16,7 @@ export class UserService {
         
       })
     }
+
     return this.httpservice.postService("https://localhost:44367/api/User/Register",data,false,header)
   }
   login(data:any){
@@ -25,6 +26,7 @@ export class UserService {
         
       })
     }
+
     return this.httpservice.postService("https://localhost:44367/api/User/Login",data,false,header)
 }
 }

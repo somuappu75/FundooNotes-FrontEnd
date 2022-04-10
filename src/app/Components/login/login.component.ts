@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
     else{
       console.log("u have entered valid data");
       let data={
-        Email:this.loginForm.value.email,
-        Password:this.loginForm.value.password
+        email:this.loginForm.value.email,
+        password:this.loginForm.value.password
 
 
       }
