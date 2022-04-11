@@ -125,7 +125,7 @@
   }
   .icondiv{
     float: left;
-    margin-top: 2.5%;
+    margin-top: 2%;
   }
   .notebutton{
     width: 100%;
@@ -144,3 +144,40 @@
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
   }
+  .example-toolbar{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    background-color: #fff;
+  }
+  .nav-list{
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    
+    a{
+      border-radius: 15%;
+    }
+    a:focus{
+      background-color: #feefc3;
+    }
+    img{
+      margin-right: 30px;
+    }
+  }
+
+.labeldiv{
+ 
+  width: 20%;
+  
+}
+.labelbutton{
+  
+  width: 100%;
+  height: 50%;
+  font-size: medium;
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+.labelbutton:hover{
+  background-color: rgb(250, 236, 211);
+}
