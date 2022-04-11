@@ -7,13 +7,14 @@
     overflow: hidden;
     position: fixed;
     display: flex;
-    
+    background-color: solid whitesmoke;
   }
   
   .example-is-mobile .example-toolbar {
     position: fixed;
     /* Make sure the toolbar will stay on top of the content as it scrolls past. */
     z-index: 2;
+    background: whitesmoke;
   }
   
   h1.example-app-name {
@@ -24,6 +25,7 @@
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     flex: 1;
+    background-color: white;
   }
   
   .example-is-mobile .example-sidenav-container {
@@ -67,4 +69,78 @@
   }
   .apps{
     margin-left: 15%;
+  }
+  .image-upload>input {
+    display: none;
+  }
+  .div-profilepic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    width: auto;
+    margin-top: 12px;
+  }
+  .profile-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  mat-sidenav-container{
+    display: flex;
+    width: 100%; 
+    height: 100%; 
+    
+  }
+  .upmat{
+    height: 100%; 
+    width: 100%; 
+    overflow: auto;
+    background-color: white;
+  }
+  .matsidenav{
+    width: 20%;
+  }
+  mat-sidenav-content{
+    justify-content: center;
+    overflow: scroll;
+    background-color: rgb(255, 250, 250);
+    width: 100%;
+    align-content:center; 
+    padding:30px;
+  }
+  mat-sidenav{
+    margin-top: 0px;
+    border-color: 1px whitesmoke;
+    background-color:white;
+    width: 355px;
+    justify-content: center !important;
+    background-color: transparent;
+  }
+  .div-profile{
+    height: 100px;
+    width: 280px;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+  }
+  .icondiv{
+    float: left;
+    margin-top: 2.5%;
+  }
+  .notebutton{
+    width: 100%;
+    height:10%;
+    font-size: medium;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+  }
+  .notebutton:hover{
+    background-color: rgb(250, 236, 211);
+  }
+  .remindbutton{
+    width: 100%;
+    height: 10%;
+    font-size: medium;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
   }

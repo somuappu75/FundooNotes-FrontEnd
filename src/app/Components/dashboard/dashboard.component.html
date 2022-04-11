@@ -1,9 +1,8 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-    <mat-toolbar color="primary" class="example-toolbar">
+    <mat-toolbar   class="example-toolbar">
       <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-      <img class="image" src="assets/icons/lp.jpg" alt="Fundoo">
-      <span><mat-label style="font-family: sans-serif; padding-left: 5px;">FundooNotes</mat-label>
-      </span>
+      <img class="image" src="assets/icons/head.png" alt="Fundoo">
+      <h1 class="example-app-name">FundooNotes</h1>
       <div class="search">
         <button mat-icon-button class="search-icon">
           <mat-icon>search</mat-icon>
@@ -33,7 +32,42 @@
                 <mat-icon>apps</mat-icon>
               </button>
             </div>
+            <!-- <div style="width:10em;">
+            <div class="div-profilepic">
+              <div class="image-upload">
+                <label for="file-input">
+                  <img src="assets/icons/profilePic.jpg" style="height: 110px;width: 110px; padding: 0px;margin: 0px;"/>
+                </label>
+                <input id="file-input" type="file" />
+              </div>
+            </div>
+            </div> -->
+            <div class="profile-content">
+              <!-- <div>
+              <h3 style="color: rgb(65, 64, 64);">{{name}}</h3>
+              <h4 style="color: rgb(71, 82, 94);">{{email}}</h4>
+              </div> -->
+            </div>
     </mat-toolbar>
+    <div class="upmat" >
+      <mat-sidenav-container  >
+         <mat-sidenav #snav mode="side" class="matsidenav"> 
+          <button mat-button class="notebutton" >
+            <div class="icondiv">
+              <mat-icon>lightbulb_outline</mat-icon>
+            </div>
+            <span > Notes</span>
+          </button>
+          <button mat-button class="remindbutton">
+            <div class="icondiv">
+              <mat-icon>notifications</mat-icon>
+            </div>
+            <span>Reminder</span>
+          </button>
+          </mat-sidenav>
+          </mat-sidenav-container>
+          </div>
+        <mat-divider></mat-divider>  
   
     <mat-sidenav-container class="example-sidenav-container"
                            [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
