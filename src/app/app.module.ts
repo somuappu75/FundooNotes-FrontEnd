@@ -25,6 +25,7 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import { DisplaynoteComponent } from './Components/displaynote/displaynote.component';
+import { FormsModule,  } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { DisplaynoteComponent } from './Components/displaynote/displaynote.compo
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,MatCardModule,
-    ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule
+    ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       console.log("invalid data");
     }
     else{
-      console.log("u have entered valid data");
+      console.log(" login Successfull");
       let data={
         email:this.loginForm.value.email,
         password:this.loginForm.value.password
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
       }
       this.userservice.login(data).subscribe((res:any)=> {
         console.log(res);
-        
+        localStorage.setItem('token', res.data);
       })
       
     }

@@ -1,1 +1,20 @@
-<p>create-note works!</p>
+<mat-card #takenote class="matcard_wrraper" (click)="noteClick()">
+    <div class="title-pin" *ngIf="notelist">
+      <mat-card-title><input matInput placeholder="title" [(ngModel)]="title"></mat-card-title>
+      <img class="icontop" src="../../../assets/icons/push_pin_black_24dp.svg">
+      
+    </div>
+  
+    <input matInput placeholder="Create a note" [(ngModel)]="description">
+    <div class="formhead" *ngIf="!notelist" >
+      <img class="search_image" src="../../../assets/icons/check_box_black_24dp.svg">
+      <img class="searchimage" src="../../../assets/icons/brush_black_24dp.svg">
+      <img class="search_image" src="../../../assets/icons/image_black_24dp.svg">
+    </div>
+    <div *ngIf="notelist">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <app-icons></app-icons>
+        <button class="close-button" mat-button (click)="Close()">close</button>
+      </div>
+    </div>
+</mat-card>
