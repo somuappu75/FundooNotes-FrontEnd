@@ -13,7 +13,10 @@ export class HttpService {
   postService(url:string,data:any,token:boolean=false,httpoptions:any){
     return this.http.post(this.baseurl+url,data,token && httpoptions)
 }
-getService(){
+getService(url:string, token:boolean=false,option:any){
+
+  return this.http.get(this.baseurl+url, token && option)
+
 }
 putService(url:string, data:any, token:boolean=false, httpOptions:any){
   return this.http.put(url, data, token && httpOptions)

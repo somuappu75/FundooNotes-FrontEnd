@@ -1,10 +1,10 @@
-<div  class="takenote" fxLayout="column">
+<div  *ngFor="let note of childMessage" class="takenote" fxLayout="column">
     <div fxLayout="row" fxLayoutAlign="space-between">
-        <p>title</p>
+        <p>{{note.title}}</p>
         <img class="icontop" src="../../../assets/icons/push_pin_black_24dp.svg">
     </div> 
    
-    <p>description</p>
+    <p>{{note.description}}</p>
   
     <div class="icons">
         <app-icons></app-icons>
