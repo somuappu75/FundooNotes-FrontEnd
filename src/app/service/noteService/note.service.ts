@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from '../httpService/http.service';
 import { HttpHeaders } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NoteService {
+  baseurl=environment.baseurl
 
   token: any;
   title: any;
@@ -23,7 +25,7 @@ export class NoteService {
          'Authorization': `Bearer ${this.token}`
       })
     }
-    return this.httpService.postService('https://localhost:44367/api/Notes/Create',data,true,header)
+    return this.httpService.postService('Notes/Create',data,true,header)
     
   }
 }
