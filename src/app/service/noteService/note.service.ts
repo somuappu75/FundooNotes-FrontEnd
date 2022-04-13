@@ -20,7 +20,7 @@ export class NoteService {
     let header ={
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-         'Authorization': `bearer ${this.token}`
+         'Authorization': `Bearer ${this.token}`
       })
     }
     return this.httpService.postService('https://localhost:44367/api/Notes/Create',data,true,header)
