@@ -26,6 +26,7 @@ import { GetallnotesComponent } from './Components/getallnotes/getallnotes.compo
 import { IconsComponent } from './Components/icons/icons.component';
 import { DisplaynoteComponent } from './Components/displaynote/displaynote.component';
 import { FormsModule,  } from '@angular/forms';
+import { UpdatenotesComponent } from './Components/updatenotes/updatenotes.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule,  } from '@angular/forms';
     CreateNoteComponent,
     GetallnotesComponent,
     IconsComponent,
-    DisplaynoteComponent
+    DisplaynoteComponent,
+    UpdatenotesComponent
   ],
   imports: [
     BrowserModule,
