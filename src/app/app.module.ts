@@ -27,6 +27,10 @@ import { IconsComponent } from './Components/icons/icons.component';
 import { DisplaynoteComponent } from './Components/displaynote/displaynote.component';
 import { FormsModule,  } from '@angular/forms';
 import { UpdatenotesComponent } from './Components/updatenotes/updatenotes.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
+import { ArchieveComponent } from './Components/archieve/archieve.component';
+import { TrashComponent } from './Components/trash/trash.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +44,15 @@ import { UpdatenotesComponent } from './Components/updatenotes/updatenotes.compo
     GetallnotesComponent,
     IconsComponent,
     DisplaynoteComponent,
-    UpdatenotesComponent
+    UpdatenotesComponent,
+    ArchieveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,MatCardModule,
-    ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FormsModule
+    ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FormsModule,MatDialogModule,MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

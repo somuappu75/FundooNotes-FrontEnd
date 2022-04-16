@@ -1,14 +1,13 @@
 <div  *ngFor="let note of childMessage" class="takenote" fxLayout="column">
     <div fxLayout="row" fxLayoutAlign="space-between">
-        <p>{{note.title}}</p>
+        <p (click)="openDialog(note)">{{note.title}}</p>
         <img class="icontop" src="../../../assets/icons/push_pin_black_24dp.svg">
     </div> 
    
-    <p>{{note.description}}</p>
+    <p (click)="openDialog(note)">{{note.description}}</p>
   
     <div class="icons">
-        <app-icons></app-icons>
-      
+        <app-icons  [noteObject]="note" (iconstodisplay)="recievefromiconstodisplaycard($event)" (noteOperation)="operation($event)"></app-icons>
     </div>
 
 </div>

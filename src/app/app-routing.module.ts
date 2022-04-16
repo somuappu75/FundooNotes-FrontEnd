@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './Components/register/register.component';
 import { LoginComponent } from './Components/login/login.component';
@@ -6,6 +6,8 @@ import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassw
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { GetallnotesComponent } from './Components/getallnotes/getallnotes.component';
+import { TrashComponent } from './Components/trash/trash.component';
+import { ArchieveComponent } from './Components/archieve/archieve.component';
 
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
@@ -15,6 +17,8 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent,
   children: [
     {path:'getallnotes', component: GetallnotesComponent},
+    {path:'trash',component:TrashComponent},
+    {path:'archieve',component:ArchieveComponent}
   ]}
   ];
   

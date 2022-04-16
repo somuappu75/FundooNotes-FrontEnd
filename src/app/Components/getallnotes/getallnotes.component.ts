@@ -16,14 +16,26 @@ export class GetallnotesComponent implements OnInit {
   }
 
   getallNotes(){
-        this.note.getallnotes().subscribe((res:any)=>{
-        console.log("res ***",res.data);
-        this.notelist=res.data;
-        this.notelist.reverse();
-        })
-  }
-  receiveEvent($event: any) {
-    this.getallNotes();
-  }
-  
+    this.note.getallnotes().subscribe((res:any)=>{
+    console.log("res *****",res.data);
+    this.notelist=res.data;
+    this.notelist.reverse();
+    this.notelist = this.notelist.filter((object: any) => {
+      return object.isArchive === false && object.isTrash === false;
+     
+    })
+    console.log(this.notelist);
+  })
+}
+receiveEvent($event: any) {
+this.getallNotes();
+}
+receiveMessagefromdisplaycard($event: any) {
+console.log("insidegetallnotes");
+this.getallNotes()
+}
+updatedData(value: any) {
+
+this.getallNotes();
+}
 }

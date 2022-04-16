@@ -1,1 +1,17 @@
-<p>updatenotes works!</p>
+<div class="text-Title">
+  <input matInput [(ngModel)]="Title">
+</div>
+<div class="text-Description">
+  <input matInput [(ngModel)]="Description">
+</div>
+<div fxLayout="row" fxLayoutAlign="space-between end">
+  <div>
+      <app-icons ></app-icons>
+  </div>
+  <div>
+      <button mat-icon-button (click)="onClose()" style="opacity: 0.9;">
+          Close
+      </button>
+  </div>
+
+</div>
