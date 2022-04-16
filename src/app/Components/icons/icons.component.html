@@ -9,8 +9,8 @@
     <mat-menu #aboveMenu="matMenu" yPosition="below">
     <div class="pop">
       <div *ngFor='let color of colorarray'>
-        <button style="background-color: transparent;border: none;" (click)="setColor(color)">
-          <mat-icon c [ngStyle]="{color:color}">circle</mat-icon>
+        <button style="background-color: transparent;border: yellow;" (click)="setColor(color)">
+          <mat-icon c [ngStyle]="{color:color}">square</mat-icon>
         </button>
       </div>
     </div>
@@ -22,6 +22,6 @@
   <img class="image" style="margin-right: 10px;
   height: 20px;" src="../../../assets/icons/more_vert_black_24dp.svg" [matMenuTriggerFor]="more">
    <mat-menu #more="matMenu">
-    <button mat-menu-item (click)="onDelete()">Delete note</button>
+    <button mat-menu-item (click)="onDelete()">Delete-note</button>
    </mat-menu>
 </div>

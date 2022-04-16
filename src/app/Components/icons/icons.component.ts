@@ -11,17 +11,28 @@ export class IconsComponent implements OnInit {
   color:any
   @Input() noteObject:any
   @Output() iconstodisplay = new EventEmitter<string>();
-  colorarray = ['#cdd4cf', '#32a852', '#cdcdd4', '#fff475', '#ccff90', '#a7ffeb', '##fbbc04', '#aecbfa'];
+  colorarray=[
+    ['#32a852'
+    ],
+    ['#cdcdd4'
+    ],
+    ['#ccff90'
+
+    ],
+    ['#a7ffeb'
+    ]
+  ]
+  
+  // colorarray = ['#cdd4cf', '#32a852', '#cdcdd4', '#fff475', '#ccff90', '#a7ffeb', '##fbbc04', '#f5424b'];
   constructor(private note: NoteService) { 
     
   }
 
   ngOnInit(): void {
-    // this.noteId=[this.noteObject.notesId]
   }
 
   onDelete() {
-    console.log('deleted');
+    console.log('Note deleted');
     this.noteId=[this.noteObject.notesId]
     this.note.trashnotes(this.noteId).subscribe((res:any) => {
       console.log(res);
@@ -32,7 +43,7 @@ export class IconsComponent implements OnInit {
 
   onArchive(){
     this.noteId=[this.noteObject.notesId]
-    console.log('Archived');
+    console.log('Note Archived ');
 
     this.note.archiveNotes(this.noteId).subscribe((res:any) =>{
       console.log(res);

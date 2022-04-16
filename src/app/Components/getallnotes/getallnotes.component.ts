@@ -31,7 +31,7 @@ receiveEvent($event: any) {
 this.getallNotes();
 }
 receiveMessagefromdisplaycard($event: any) {
-console.log("insidegetallnotes");
+console.log("inside-get-allnotes");
 this.getallNotes()
 }
 updatedData(value: any) {

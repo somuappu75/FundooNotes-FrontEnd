@@ -82,7 +82,7 @@ ColorNote(id:any, data:any){
     })
 
   }
-  return this.httpService.putService("https://localhost:44367/api/Notes/Color"+id,data,true,headersOption)
+  return this.httpService.putService("https://localhost:44367/api/Notes/Color/"+id,data,true,headersOption)
 }
   
 

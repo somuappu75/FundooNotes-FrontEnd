@@ -31,6 +31,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { ArchieveComponent } from './Components/archieve/archieve.component';
 import { TrashComponent } from './Components/trash/trash.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,7 @@ import { TrashComponent } from './Components/trash/trash.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,MatCardModule,
-    ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FormsModule,MatDialogModule,MatMenuModule
+    ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FormsModule,MatDialogModule,MatMenuModule,MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

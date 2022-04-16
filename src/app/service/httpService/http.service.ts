@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpService {
-  // baseurl=environment.baseurl
   
 
   constructor(private http:HttpClient) {}
