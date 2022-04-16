@@ -1,4 +1,4 @@
-<div  *ngFor="let note of childMessage" class="takenote" fxLayout="column">
+<div  *ngFor="let note of childMessage" class="takenote" fxLayout="column" [style.background]="note.color">
     <div fxLayout="row" fxLayoutAlign="space-between">
         <p (click)="openDialog(note)">{{note.title}}</p>
         <img class="icontop" src="../../../assets/icons/push_pin_black_24dp.svg">

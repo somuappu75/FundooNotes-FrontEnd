@@ -11,19 +11,7 @@ export class IconsComponent implements OnInit {
   color:any
   @Input() noteObject:any
   @Output() iconstodisplay = new EventEmitter<string>();
-  colorarray=[
-    ['#32a852'
-    ],
-    ['#cdcdd4'
-    ],
-    ['#ccff90'
-
-    ],
-    ['#a7ffeb'
-    ]
-  ]
-  
-  // colorarray = ['#cdd4cf', '#32a852', '#cdcdd4', '#fff475', '#ccff90', '#a7ffeb', '##fbbc04', '#f5424b'];
+   colorarray = ['#cdd4cf', '#32a852', '#cdcdd4', '#fff475', '#ccff90', '#a7ffeb', '#fbbc04', '#f5424b','#324aa8','#a83246','#9b32a8'];
   constructor(private note: NoteService) { 
     
   }
@@ -56,7 +44,7 @@ export class IconsComponent implements OnInit {
   setColor(Color:any){
     this.noteId=[this.noteObject.notesId]
     let data = {
-      color : Color
+      Color : Color
     }
     this.note.ColorNote(this.noteId,data).subscribe((result: any) => {
       console.log(result); 
