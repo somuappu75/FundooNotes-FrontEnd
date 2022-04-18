@@ -32,7 +32,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ArchieveComponent } from './Components/archieve/archieve.component';
 import { TrashComponent } from './Components/trash/trash.component';
 import {MatSelectModule} from '@angular/material/select';
-
+import { AuthguardServiceService } from './authguard-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,7 +55,10 @@ import {MatSelectModule} from '@angular/material/select';
     BrowserAnimationsModule,MatFormFieldModule,MatInputModule,MatCheckboxModule,MatButtonModule,FlexLayoutModule,MatCardModule,
     ReactiveFormsModule,HttpClientModule,MatSidenavModule,MatToolbarModule,MatIconModule,MatListModule,FormsModule,MatDialogModule,MatMenuModule,MatSelectModule
   ],
-  providers: [],
+  providers: [
+
+    AuthguardServiceService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
