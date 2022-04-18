@@ -127,3 +127,38 @@ h1.example-app-name {
   height: 100%;
   width: 100%;
 }
+.example-toolbar-lt-lg{
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  background-color: #fff;
+}
+.listmenuIcon-lt-md{
+  display: none;
+}
+.search-box-gt-md{
+    
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #f1f3f4;
+  border-radius: 10px;
+  margin-left: 100px;
+  
+  padding: 10px;
+ 
+  input{
+    background-color: transparent;
+    border: none;
+    outline-style: none;
+  }
+}
+.search-box-lt-lg{
+  display: flex;
+  margin-left: 3px;
+  align-items: center;
+  input{
+
+    display: none;
+  }
+}

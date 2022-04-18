@@ -1,5 +1,6 @@
+<div style="margin-top: 20px; margin-left: 150px;">
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="example-toolbar">
+  <mat-toolbar color="primary" class="example-toolbar" ngClass.lt-lg="example-toolbar-lt-lg">
     <div class="keep-icon">
       <button mat-icon-button (click)="snav.toggle()">
         <mat-icon class="menu-icon">menu</mat-icon>
@@ -8,14 +9,14 @@
       <h1 class="example-app-name">FundooNotes</h1>
     </div>
 
-    <div class="search-box">
+    <div ngClass.gt-md="search-box-gt-md" ngClass.lt-lg="search-box-lt-lg">
       <img src="../../../assets/icons/search_black_24dp.svg" />
       <input matInput placeholder="search" />
     </div>
 
     <div class="right-icons">
       <img src="../../../assets/icons/refresh_black_24dp.svg" />
-      <img src="../../../assets/icons/grid_view_black_24dp.svg" />
+      <img ngClass.lt-md="listmenuIcon-lt-md "src="../../../assets/icons/grid_view_black_24dp.svg" />
       <img src="../../../assets/icons/settings_black_24dp.svg" />
     </div>
     <div class="menu">
