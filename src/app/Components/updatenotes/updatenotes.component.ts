@@ -12,6 +12,7 @@ export class UpdatenotesComponent implements OnInit {
   Title: any
   Description: any
   noteId: any
+  color:any
 
 
   constructor(private NoteService:NoteService, public dialogRef: MatDialogRef<UpdatenotesComponent>,
@@ -20,6 +21,7 @@ export class UpdatenotesComponent implements OnInit {
     this.Title = data.title
     this.Description = data.description
     this.noteId = data.notesId
+    this.color=data.color
 
   }
 
@@ -43,5 +45,11 @@ export class UpdatenotesComponent implements OnInit {
     this.dialogRef.close()
     
 
+  }
+  messageeventforRecieve($event:any){
+    console.log("event===="+$event);
+    this.color($event.color, this.noteId);
+    this.noteUpdated.emit($event);
+   
   }
 }
