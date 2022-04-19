@@ -15,10 +15,10 @@
 
     <div class="right-icons">
       <img src="../../../assets/icons/refresh_black_24dp.svg" />
-      <button mat-icon-button  *ngIf="list" (click)="changeView()" fxShow="true" fxHide.lt-sm="true">
+      <button class="listcol "mat-icon-button  *ngIf="list" (click)="changeView()" fxShow="true" fxHide.lt-sm="true">
         <mat-icon class="icon">dns</mat-icon>
       </button>
-      <button mat-icon-button  *ngIf="grid" (click)="changeView()" fxShow="true" fxHide.lt-sm="true">
+      <button class="listcol" mat-icon-button  *ngIf="grid" (click)="changeView()" fxShow="true" fxHide.lt-sm="true">
         <mat-icon class="icon">view_module</mat-icon>
       </button>
       <img  ngClass.lt-md="listmenuIcon-lt-md "src="../../../assets/icons/grid_view_black_24dp.svg" />

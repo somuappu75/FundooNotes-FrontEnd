@@ -27,11 +27,11 @@
     <button mat-menu-item (click)="onDelete()">Delete-note</button>
    </mat-menu>
    <button mat-icon-button (click)='onDeleteForever()'  *ngIf="isDeleted" matTooltip="Delete forever"
-   matTooltipClass="tooltip">
-   <img class="icons" src="./../../../assets/icons/delete_forever_black_24dp.svg" alt="delete_forvr">
+   matTooltipClass="tooltip"name="">
+   <img class="image" src="./../../../assets/icons/delete_forever_black_24dp.svg" alt="delete_forvr">
 		</button>
     <button mat-icon-button  *ngIf="isDeleted" matTooltip="Delete forever"
     matTooltipClass="tooltip">
-    <img class="icons" src="./../../../assets/icons//restore_from_trash_black_24dp.svg" alt="delete_forever">
+    <img class="image" src="./../../../assets/icons//restore_from_trash_black_24dp.svg" alt="delete_forever">
   </button>
 </div>
