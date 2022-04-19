@@ -31,7 +31,7 @@ export class UpdatenotesComponent implements OnInit {
       Title: this.Title,
       Description: this.Description,
     }
-    console.log('updated', reqData, this.noteId);
+    console.log('NoteUpdated', reqData, this.noteId);
 
     this.NoteService.updatenote(reqData, this.noteId).subscribe((res) => {
       console.log(res);

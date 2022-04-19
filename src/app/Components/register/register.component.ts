@@ -9,6 +9,7 @@ import { UserService } from 'src/app/service/userService/user.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
+  hide = true;
 
   constructor(private fb:FormBuilder,private userservice:UserService) { }
 

@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NoteService } from 'src/app/service/noteService/note.service';
+import { ActivatedRoute } from '@angular/router';
+import { ArchieveComponent } from '../archieve/archieve.component';
+import { TrashComponent } from '../trash/trash.component';
 
 @Component({
   selector: 'app-icons',
@@ -9,14 +12,29 @@ import { NoteService } from 'src/app/service/noteService/note.service';
 export class IconsComponent implements OnInit {
   noteId: any
   color:any
+  notes:any
   @Input() noteObject:any
   @Output() iconstodisplay = new EventEmitter<string>();
-   colorarray = ['#cdd4cf', '#32a852', '#cdcdd4', '#fff475', '#ccff90', '#a7ffeb', '#fbbc04', '#f5424b','#324aa8','#a83246','#9b32a8'];
-  constructor(private note: NoteService) { 
+  isDeleted: boolean = false
+  isArchived: boolean = false
+   colorarray = [ '#fc0303', 'orange', 'yellow', '#03fc94', '#008080', '#32a2a8', '#3275a8', '#89729E', 'rgb(255,192,203)','#bc8f8f', '#a9a9a9',];
+  constructor(private note: NoteService,private activatedroute:ActivatedRoute) { 
     
   }
 
   ngOnInit(): void {
+    let del = this.activatedroute.snapshot.component;
+
+    if (del == TrashComponent) {
+      this.isDeleted = true;
+      console.log(this.isDeleted);
+    }
+    let arc = this.activatedroute.snapshot.component;
+
+    if (arc == ArchieveComponent) {
+      this.isArchived = true;
+      console.log(this.isArchived);
+    }
   }
 
   onDelete() {
@@ -39,6 +57,13 @@ export class IconsComponent implements OnInit {
       
     })
     
+  }
+  onDeleteForever(){
+    this.noteId=[this.noteObject.notesId]
+    this.note.deleteNote(this.noteId).subscribe((res:any) =>{
+      console.log(res);
+      this.iconstodisplay.emit(res)
+    } )
   }
 
   setColor(Color:any){

@@ -1,27 +1,37 @@
 <div class="icongroup">
   
   <img class="image" style="margin-right: 10px;
-  height: 20px;" src="../../../assets/icons/add_alert_black_24dp.svg">
+  height: 20px;" src="../../../assets/icons/add_alert_black_24dp.svg"  *ngIf="!isDeleted">
   <img class="image" style="margin-right: 10px;
-  height: 20px;" src="../../../assets/icons/person_add_alt_black_24dp.svg">
+  height: 20px;" src="../../../assets/icons/person_add_alt_black_24dp.svg"  *ngIf="!isDeleted">
   <img class="image" style="margin-right: 10px;
-  height: 20px;" src="../../../assets/icons/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu">
+  height: 20px;" src="../../../assets/icons/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu"  *ngIf="!isDeleted">
     <mat-menu #aboveMenu="matMenu" yPosition="below">
-    <div class="pop" style="display: flex; flex-flow: row wrap; width: 180px;">
+    <div class="pop" style="display: flex; flex-flow: row; width: 350px;">
       <div *ngFor='let color of colorarray'>
         <button style="background-color: transparent;border: none;" (click)="setColor(color)">
-          <mat-icon c [ngStyle]="{color:color}">square</mat-icon>
+          <mat-icon c [ngStyle]="{color:color}">circle</mat-icon>
         </button>
       </div>
     </div>
   </mat-menu>
   <img class="image" style="margin-right: 10px;
-  height: 20px;" src="../../../assets/icons/image_black_24dp.svg">
+  height: 20px;" src="../../../assets/icons/image_black_24dp.svg"  *ngIf="!isDeleted">
   <img class="image" style="margin-right: 10px;
-  height: 20px;" src="../../../assets/icons/archive_black_24dp.svg" (click)="onArchive()">
+  height: 20px;" src="../../../assets/icons/archive_black_24dp.svg" *ngIf="!isArchived && !isDeleted" (click)="onArchive()">
   <img class="image" style="margin-right: 10px;
-  height: 20px;" src="../../../assets/icons/more_vert_black_24dp.svg" [matMenuTriggerFor]="more">
+  height: 20px;" src="../../../assets/icons/unarchive_black_24dp.svg"  *ngIf="isArchived && !isDeleted" (click)="onArchive()">
+  <img class="image" style="margin-right: 10px;
+  height: 20px;" src="../../../assets/icons/more_vert_black_24dp.svg" [matMenuTriggerFor]="more" *ngIf="!isDeleted">
    <mat-menu #more="matMenu">
     <button mat-menu-item (click)="onDelete()">Delete-note</button>
    </mat-menu>
+   <button mat-icon-button (click)='onDeleteForever()'  *ngIf="isDeleted" matTooltip="Delete forever"
+   matTooltipClass="tooltip">
+   <img class="icons" src="./../../../assets/icons/delete_forever_black_24dp.svg" alt="delete_forvr">
+		</button>
+    <button mat-icon-button  *ngIf="isDeleted" matTooltip="Delete forever"
+    matTooltipClass="tooltip">
+    <img class="icons" src="./../../../assets/icons//restore_from_trash_black_24dp.svg" alt="delete_forever">
+  </button>
 </div>

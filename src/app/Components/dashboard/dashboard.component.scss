@@ -24,6 +24,7 @@ h1.example-app-name {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
+  background-color: #ffffff;
 }
 
 .example-is-mobile .example-sidenav-container {
@@ -35,7 +36,7 @@ h1.example-app-name {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid darkgray;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .menu-icon{
   color: #000;
@@ -161,4 +162,7 @@ h1.example-app-name {
 
     display: none;
   }
+}
+.list{
+  margin-left:auto;
 }

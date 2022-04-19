@@ -1,7 +1,16 @@
 .image{
     padding: 5px;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    
  }
  .icongroup{
     display: flex;
  }
+ #col{
+    padding: 10x;
+ }
+ .image:hover {
+   background-color: brown;
+   color: brown;
+}
