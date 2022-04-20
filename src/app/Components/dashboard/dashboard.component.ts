@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { NoteService } from 'src/app/service/noteService/note.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,10 +24,9 @@ export class DashboardComponent implements OnDestroy {
   );
 
   private _mobileQueryListener: () => void;
-  router: any;
   
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private noteservice:NoteService) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private noteservice:NoteService,private router:Router) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);

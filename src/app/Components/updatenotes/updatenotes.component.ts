@@ -46,10 +46,4 @@ export class UpdatenotesComponent implements OnInit {
     
 
   }
-  messageeventforRecieve($event:any){
-    console.log("event===="+$event);
-    this.color($event.color, this.noteId);
-    this.noteUpdated.emit($event);
-   
-  }
 }

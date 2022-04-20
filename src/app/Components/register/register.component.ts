@@ -9,7 +9,7 @@ import { UserService } from 'src/app/service/userService/user.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm!: FormGroup;
-  hide = true;
+  hide :boolean =true;
 
   constructor(private fb:FormBuilder,private userservice:UserService) { }
 
@@ -46,5 +46,7 @@ onSubmit() {
   }
 
 }
-
+passswordhide() {
+  this.hide = !this.hide;
+}
 }
