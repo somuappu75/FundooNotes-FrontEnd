@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/service/noteService/note.service';
 })
 export class GetallnotesComponent implements OnInit {
   notelist:any;
+  format:any;
 
   constructor(private note:NoteService) { }
 

@@ -99,24 +99,5 @@ deleteNote(id:any){
   }
   return this.httpService.deleteService('https://localhost:44367/api/Notes/Delete/'+id, true, header)
 }
-  
-getView() 
-{
-  this.gridview();
-  return this.subject.asObservable();
-}
-
-gridview()
-{
-  if(this.result)
-  {
-    this.subject.next({data:"column"});
-    this.result = false;
-  }
-  else
-  {
-    this.subject.next({data:"row"});
-    this.result = true;
-  }
-} 
+ 
 }

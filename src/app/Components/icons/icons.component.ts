@@ -17,7 +17,7 @@ export class IconsComponent implements OnInit {
   @Output() iconstodisplay = new EventEmitter<string>();
   isDeleted: boolean = false
   isArchived: boolean = false
-   colorarray = [ '#fc0303', 'orange', 'yellow', '#03fc94', '#008080', '#32a2a8', '#3275a8', '#89729E', 'rgb(255,192,203)','#bc8f8f', '#a9a9a9',];
+   colorarray = [ '#d7aefb', '#f28b82', '#fbbc04', '#fff475', '#ccff90', '#a7ffeb', '#cbf0f8', '#aecbfa', '#e8eaed', '#e6c9a8', '#e8eaed', '#006973'];
   constructor(private note: NoteService,private activatedroute:ActivatedRoute) { 
     
   }
@@ -36,7 +36,15 @@ export class IconsComponent implements OnInit {
       console.log(this.isArchived);
     }
   }
-
+  Gettrash() {
+    console.log('restorefromtrash');
+    this.noteId=[this.noteObject.notesId]
+    this.note.trashnotes(this.noteId).subscribe((res:any) => {
+      console.log(res);
+      this.iconstodisplay.emit(res)
+    
+    })
+  }
   onDelete() {
     console.log('Note deleted');
     this.noteId=[this.noteObject.notesId]

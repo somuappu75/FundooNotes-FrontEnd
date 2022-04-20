@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { NoteService } from 'src/app/service/noteService/note.service';
 import { Router } from '@angular/router';
+import { DatashareService } from 'src/app/service/sharing/datashare.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
+  Search:any
+  Grid:boolean=false
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
@@ -26,7 +29,7 @@ export class DashboardComponent implements OnDestroy {
   private _mobileQueryListener: () => void;
   
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private noteservice:NoteService,private router:Router) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher,private noteservice:NoteService,private router:Router,private datashare:DatashareService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -35,21 +38,46 @@ export class DashboardComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
-  list: boolean = true;
-  grid: boolean = false;
-  changeView() {
-    if (this.list) {
-      this.grid = true;
-      this.list = false;
-    }
-    else {
-      this.list = true;
-      this.grid = false;
-    }
-    this.noteservice.getView();
-  }
+  // list: boolean = true;
+  // grid: boolean = false;
+  // changeView() {
+  //   if (this.list) {
+  //     this.grid = true;
+  //     this.list = false;
+  //   }
+  //   else {
+  //     this.list = true;
+  //     this.grid = false;
+  //   }
+  //   this.noteservice.getView();
+  // }
   onsignout(){
     localStorage.removeItem("token");
     this.router.navigateByUrl('/login')
   }
+  
+  listview(){
+    this.Grid=false;
+    this.datashare.GetValue(this.changeview().valueOf());
+    console.log("function",this.changeview());
+    console.log("grid",this.Grid);
+  }
+
+  gridview(){
+    this.Grid=true
+    this.datashare.GetValue(this.changeview().valueOf());
+    console.log("function",this.changeview());
+    console.log("grid",this.Grid);
+  }
+  changeFormat: boolean=false
+  changeview(){
+    if(this.changeFormat == false){
+      this.changeFormat=true
+      return this.changeFormat
+    }
+    else{
+      this.changeFormat=false
+      return this.changeFormat
+    }
+}
 }

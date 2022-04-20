@@ -12,5 +12,14 @@
 
 }
 .icons{
-    text-align: center;
+    opacity: 0;
 }
+.takenote:hover .icons{
+    text-align: center;
+    opacity: 1;
+  }
+.formatStyle{
+    width: 600px;
+    height:auto;
+    margin-left: 450px;
+      }

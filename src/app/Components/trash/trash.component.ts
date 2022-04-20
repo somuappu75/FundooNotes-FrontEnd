@@ -27,7 +27,7 @@ export class TrashComponent implements OnInit {
 
     }
     receiveMessagefromdisplaycard($event: any) {
-      console.log("insidegetallnotes", $event);
+      console.log("insidegetallnotes");
       this.getTrashList();
 
   }

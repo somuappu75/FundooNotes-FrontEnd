@@ -10,23 +10,24 @@
 
     <div ngClass.gt-md="search-box-gt-md" ngClass.lt-lg="search-box-lt-lg">
       <img src="../../../assets/icons/search_black_24dp.svg" />
-      <input matInput placeholder="search" />
+      <input matInput placeholder="search"  [(ngModel)]="Search" autocomplete="off"/>
     </div>
 
     <div class="right-icons">
       <img src="../../../assets/icons/refresh_black_24dp.svg" />
+      <img src="../../../assets/icons/dns_black_24dp (1).svg" *ngIf="!Grid" (click)="gridview();changeview()"/>
       <!-- <button class="listcol "mat-icon-button  *ngIf="list" (click)="changeView()" fxShow="true" fxHide.lt-sm="true">
         <mat-icon class="icon">dns</mat-icon>
       </button>
       <button class="listcol" mat-icon-button  *ngIf="grid" (click)="changeView()" fxShow="true" fxHide.lt-sm="true">
         <mat-icon class="icon">view_module</mat-icon>
       </button> -->
-      <img  ngClass.lt-md="listmenuIcon-lt-md "src="../../../assets/icons/grid_view_black_24dp.svg" />
+      <img  ngClass.lt-md="listmenu-lt-md "src="../../../assets/icons/grid_view_black_24dp.svg" *ngIf="Grid" (click)="listview();changeview()"/>
       <img src="../../../assets/icons/settings_black_24dp.svg" />
     </div>
     <div class="menu">
       <img src="../../../assets/icons/apps_black_24dp.svg" />
-      <img  (click)="onsignout()" src="../../../assets/icons/account_circle_black_24dp.svg" />
+      <img class="avatar" (click)="onsignout()" src="../../../assets/icons/img_avatar.png"style="width:25px" />
     </div>
   </mat-toolbar>
 

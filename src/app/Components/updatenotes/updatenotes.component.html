@@ -1,13 +1,13 @@
-<!-- <div [style.background]="data.color"> -->
+<div [style.background]="data.color" style="padding: 10px;">
 <div class="text-Title">
-  <input matInput [(ngModel)]="Title">
+  <input matInput style="background: transparent; outline-style: none; border: none;" [(ngModel)]="Title">
 </div>
 <div class="text-Description">
-  <input matInput [(ngModel)]="Description">
+  <input matInput style="background: transparent; outline-style: none; border: none;" [(ngModel)]="Description">
 </div>
 <div fxLayout="row" fxLayoutAlign="space-between end">
   <div>
-      <app-icons ></app-icons>
+      <app-icons [noteObject]="data" (iconstodisplay)="messageforRecive($event)" ></app-icons>
   </div>
   <div>
       <button mat-icon-button (click)="onClose()" style="opacity: 0.8;">
@@ -16,4 +16,4 @@
   </div>
 
 </div>
-<!-- </div> -->
+ </div>

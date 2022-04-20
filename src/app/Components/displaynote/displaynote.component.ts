@@ -2,6 +2,7 @@ import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
 import { NoteService } from 'src/app/service/noteService/note.service';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { UpdatenotesComponent } from '../updatenotes/updatenotes.component';
+import { DatashareService } from 'src/app/service/sharing/datashare.service';
 @Component({
   selector: 'app-displaynote',
   templateUrl: './displaynote.component.html',
@@ -9,12 +10,14 @@ import { UpdatenotesComponent } from '../updatenotes/updatenotes.component';
 })
 export class DisplaynoteComponent implements OnInit {
   sentmsg: any;
+  format: any;
   @Input() childMessage: any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
   col: any;
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,private dataservice:DatashareService) { }
   ngOnInit(): void {
+    this.dataservice.store1.subscribe(x => this.format=x)
    }
    openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdatenotesComponent, {
