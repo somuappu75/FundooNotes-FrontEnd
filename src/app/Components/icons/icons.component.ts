@@ -81,7 +81,7 @@ export class IconsComponent implements OnInit {
     }
     this.note.ColorNote(this.noteId,data).subscribe((result: any) => {
       console.log(result); 
-      this.iconstodisplay.emit(result)
+      this.iconstodisplay.emit(Color)
 
   })
 }

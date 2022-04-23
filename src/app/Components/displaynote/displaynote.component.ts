@@ -24,6 +24,7 @@ export class DisplaynoteComponent implements OnInit {
    openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdatenotesComponent, {
      width: '450px',
+     panelClass: 'my-custom-dialog-class',
      data:note
      });
      dialogRef.afterClosed().subscribe(result => {
