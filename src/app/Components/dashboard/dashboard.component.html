@@ -10,7 +10,7 @@
 
     <div ngClass.gt-md="search-box-gt-md" ngClass.lt-lg="search-box-lt-lg">
       <img src="../../../assets/icons/search_black_24dp.svg" />
-      <input matInput placeholder="search"  [(ngModel)]="Search" autocomplete="off"/>
+      <input matInput placeholder="search"  [(ngModel)]="Search" autocomplete="off"(keyup)="searchnote($event)"/>
     </div>
 
     <div class="right-icons">

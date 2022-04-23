@@ -33,7 +33,7 @@ import { ArchieveComponent } from './Components/archieve/archieve.component';
 import { TrashComponent } from './Components/trash/trash.component';
 import {MatSelectModule} from '@angular/material/select';
 import { AuthguardServiceService } from './authguard-service.service';
-import { PipesPipe } from './Components/pipes.pipe';
+import { SearchPipe } from './pipes/search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,7 +49,7 @@ import { PipesPipe } from './Components/pipes.pipe';
     UpdatenotesComponent,
     ArchieveComponent,
     TrashComponent,
-    PipesPipe
+    SearchPipe
   ],
   imports: [
     BrowserModule,

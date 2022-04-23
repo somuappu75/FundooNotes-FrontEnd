@@ -11,12 +11,14 @@ import { DatashareService } from 'src/app/service/sharing/datashare.service';
 export class DisplaynoteComponent implements OnInit {
   sentmsg: any;
   format: any;
+  notesearch="";
   @Input() childMessage: any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
   col: any;
   constructor(public dialog: MatDialog,private dataservice:DatashareService) { }
   ngOnInit(): void {
+    this.dataservice.store2.subscribe(x => this.notesearch=x)
     this.dataservice.store1.subscribe(x => this.format=x)
    }
    openDialog(note:any): void {

@@ -44,9 +44,10 @@ export class UpdatenotesComponent implements OnInit {
     })
     this.dialogRef.close()
   }
-  messageforRecive($event:any){
-    console.log("ColorUpdate"+$event);
-    this.noteUpdated.emit($event);
+  messageforRecive(event:any){
+    console.log("ColorNoted"+event);
+    this.color=event;
+    this.noteUpdated.emit(event);
    
   }
 }

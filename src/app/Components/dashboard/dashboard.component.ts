@@ -80,4 +80,7 @@ export class DashboardComponent implements OnDestroy {
       return this.changeFormat
     }
 }
+searchnote(stringData:any){
+  this.datashare.seraching(stringData.target.value);
+}
 }
