@@ -1,5 +1,5 @@
-<div class="Container">
-    <div class="Header">
+<div class="Container"ngClass.lt-md="container-lt-md" fxLayout="column"  fxLayoutAlign="center center">
+    <div class="Header"fxLayout="column"  fxLayoutAlign="center center">
         <div class="headings">
             <h2>
             <span style="color:rgb(66, 133, 244)">F</span>
@@ -19,7 +19,7 @@
          <p class="desc">Use Your Fundoo Account</p>
      </div>
      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div class="login-content">
+      <div class="login-content"fxLayout="column"  fxLayoutAlign="center center">
          <div class="Email-content">
              <mat-form-field class="email" appearance="outline">
              <mat-label>Email or Phone</mat-label>
@@ -27,7 +27,7 @@
              <mat-error>Enter Valid Phone or Mail</mat-error>
              </mat-form-field> 
          </div>
-         <div class="Password-content">
+         <div class="Password-content" fxLayout="column"  fxLayoutAlign="space-between">
                  <mat-form-field class="password" appearance="outline">
                  <mat-label>Password</mat-label>
                  <input matInput placeholder="password"formControlName="password">
@@ -36,7 +36,7 @@
                  <a routerLink="/forgotpassword" target="_blank">Forgot password?</a>       
          </div>
      </div>
-     <div class="btn">
+     <div class="btn"fxLayout="row"  fxLayoutAlign="space-between center">
          <a mat-button  routerLink="/register" target="_blank">Create Account</a>
          <button mat-raised-button >Next</button>
      </div>
